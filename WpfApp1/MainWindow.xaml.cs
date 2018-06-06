@@ -29,7 +29,7 @@ namespace WpfApp1
         {
             string gitHubAddress = string.Empty;
 
-            MessageBox.Show("깃 허브 주소 : " + gitHubAddress + " 입니다.");
+            MessageBox.Show("깃 허브 주소 : " + gitHubAddress + " 입니다. ddd");
         }
     }
 }
