@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using WpfApp1.Model;
+
 namespace WpfApp1
 {
     /// <summary>
@@ -23,6 +25,38 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+
+            InitNationControl();
+            InitTypeControl();
+        }
+
+        private List<ComboModel> NationList = null;
+        private List<ComboModel> StockTypeList = null;
+
+        private void InitNationControl()
+        {
+            NationList = new List<ComboModel>();
+            //NationList.Add(new ComboModel() { ComboVal = "ALL", ComboNm = "전체" });
+            NationList.Add(new ComboModel() { ComboVal = "KOR", ComboNm = "한국" });
+            NationList.Add(new ComboModel() { ComboVal = "CHI", ComboNm = "중국" });
+            NationList.Add(new ComboModel() { ComboVal = "VET", ComboNm = "베트남" });
+            NationList.Add(new ComboModel() { ComboVal = "IDN", ComboNm = "인도네시아" });
+
+            cboNation.ItemsSource = NationList;
+            cboNation.SelectedIndex = 0;
+        }
+
+        private void InitTypeControl()
+        {
+            StockTypeList = new List<ComboModel>();
+            //StockTypeList.Add(new ComboModel() { ComboVal = "ALL", ComboNm = "전체" });
+            StockTypeList.Add(new ComboModel() { ComboVal = "034220", ComboNm = "LG디스플레이" });
+            //StockTypeList.Add(new ComboModel() { ComboVal = "CHI", ComboNm = "중국" });
+            //StockTypeList.Add(new ComboModel() { ComboVal = "VET", ComboNm = "베트남" });
+            //StockTypeList.Add(new ComboModel() { ComboVal = "IDN", ComboNm = "인도네시아" });
+
+            cboStockType.ItemsSource = StockTypeList;
+            cboStockType.SelectedIndex = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -7,6 +7,35 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="gitHub 주소확인" Click="Button_Click" HorizontalAlignment="Left" Margin="217,72,0,0" VerticalAlignment="Top" Width="180"/>
+        <!--<Button Content="gitHub 주소확인" Click="Button_Click" HorizontalAlignment="Left" Margin="440,21,0,0" VerticalAlignment="Top" Width="180"/>-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="150" />
+            
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="국가선택" ></TextBlock>
+        <ComboBox Grid.Row="1" Grid.Column="2" Width="120"
+                  x:Name="cboNation"
+                  HorizontalAlignment="Left"                   
+                  VerticalAlignment="Top" 
+                  ItemsSource="{Binding NationList}"
+                  DisplayMemberPath="ComboNm"
+                  />
+        <ComboBox Grid.Row="1" Grid.Column="3" Width="120"
+                  x:Name="cboStockType"
+                  HorizontalAlignment="Left"                   
+                  VerticalAlignment="Top" 
+                  ItemsSource="{Binding StockTypeList}"
+                  DisplayMemberPath="ComboNm"
+                  />        
+        
     </Grid>
 </Window>
