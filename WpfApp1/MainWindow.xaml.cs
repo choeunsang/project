@@ -28,7 +28,9 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string gitHubAddress = string.Empty;
+            gitHubAddress = "https://github.com/choeunsang/project.git";
 
+            //MessageBox.Show("깃 허브 주소 : " + gitHubAddress + " 입니다. ddd");
             MessageBox.Show("깃 허브 주소 : " + gitHubAddress + " 입니다. ddd");
         }
     }
